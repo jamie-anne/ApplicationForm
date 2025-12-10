@@ -7,46 +7,35 @@
     <link rel="stylesheet" href="application.css">
 </head>
 <body>
-<!-- 
-    <header>
-        <nav class="navar">
-            <ul class="nav-links">
-                <li><a href="#home">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#services">Services</a></li>
-                <li><a href="#contact">Contact</a></li>
-              </ul>
-        </nav>
-    </header>
--->
+    <form action="application.php" method="post">
 
 <div class="first_row">
     <div class="form-name">
         <label for="firstname">First Name</label>
-        <input type="text" id="firstname" class="firstname_input"  minlength="6" required>
+        <input type="text" id="firstname" class="firstname_input" autocomplete="off"  minlength="6" name="firstname_db" required>
     </div>
     <div class="form-name">
         <label for="middlename">Middle Name</label>
-        <input type="text" id="middlename" class="middlename_input"  minlength="6" required>
+        <input type="text" id="middlename" class="middlename_input" autocomplete="off" minlength="6" name="middlename_db" required>
     </div>
     <div class="form-name">
         <label for="lastname">Last Name</label>
-        <input type="text" id="lastname" class="lastname_input" minlength="6" required>
-    </div>
+        <input type="text" id="lastname" class="lastname_input" autocomplete="off" minlength="6" name="lastname_db" required>
+    </div> 
 </div>
 
 <div class="second_row">
     <div class="form-birt_email_contact">
         <label for="birthdate">Birthdate</label>
-        <input type="date" id="birthdate" class="birthdate_input"  required>
+        <input type="date" id="birthdate" class="birthdate_input" name="birthdate_db" required>
     </div>
     <div class="form-birt_email_contact">
         <label for="email">Email</label>
-        <input type="email" id="email" class="email_input"  required>
+        <input type="email" id="email" class="email_input" autocomplete="off" name="email_db" required>
     </div>
     <div class="form-birt_email_contact">
         <label for="phone">Phone/Mobile No</label>
-        <input type="text" id="phone" name="phone" placeholder="1234 567 8901" maxlength="13" required oninput="formatPhone(this)">
+        <input type="text" id="phone" name="phone" placeholder="1234 567 8901" maxlength="13" name="contact_db" required oninput="formatPhone(this)">
     </div>
 </div>
 
@@ -54,12 +43,12 @@
     <div class="add">
         <div class="form-address">
             <label for="address">Address</label>
-            <input for="text" class="address" id="address" placeholder="House no., Street" required>
+            <input for="text" class="address" id="address" placeholder="House no., Street" autocomplete="off" name="address_db" required>
         </div>
     </div>
     <div class="form-address">
         <p for="barangay">Barangay</p>
-        <select required>
+        <select required name="barangay_db">
             <option value="" disabled selected>Please select</option>
             <option value="Balante">Balante</option>
             <option value="Bayanihan">Bayanihan</option>
@@ -88,14 +77,14 @@
     </div>
     <div class="form-address">
         <p for="city">City/Municipality</p>
-        <select required>
+        <select required name="city_db" >
             <option value="" disabled selected>Please select</option>
             <option value="Balante">Balante</option>
             </select>
     </div>
     <div class="form-address">
         <p for="province">Province</p>
-        <select required>
+        <select required name="province_db">
             <option value="" disabled selected>Please select</option>
             <option value="Balante">Balante</option>
             </select>
@@ -106,36 +95,36 @@
 <div class="fourth_row">
     <div class="form-college">
         <label for="college">College/School</label>
-        <input type="text" id="college" class="college" minlength="6" required>
+        <input type="text" id="college" class="college" minlength="6" autocomplete="off" name="college_db" required>
     </div>
     <div class="form-college">
         <label for="course">Course</label>
-        <input type="text" id="course" class="course" minlength="6" required>
+        <input type="text" id="course" class="course" minlength="6" autocomplete="off" name="course_db" required>
     </div>
 </div>
 <div class="fifth_row">
     <div class="form-occupation">
         <label for="occupation">Occupation</label>
-        <select required class="occupation">
+        <select required class="occupation" name="occupation_db">
             <option value="" disabled selected>Please select</option>
             <option value="Balante">Balante</option>
         </select>
     </div>
     <div class="form-occupation">
         <label for="department">Department/Position</label>
-        <input type="text" id="department" class="department" minlength="6" required>
+        <input type="text" id="department" class="department" minlength="6" autocomplete="off" name="department_db" required>
     </div>
 </div>
 
 <div class="sixth_row">
     <div class="form-volunteer_area">
         <label for="volunteer" >In which areas would you like to volunteer?</label>
-        <select required class="volunteer">
+        <select required class="volunteer" name="area_volunteer_db">
             <option value="" disabled selected>Please select</option>
             <option value="Balante">Balante</option>
         </select>
         <label for="volunteer" >Which of the volunteering activities interests you?</label>
-        <select required class="volunteer">
+        <select required class="volunteer" name="activities_volunteer_db">
             <option value="" disabled selected>Please select</option>
             <option value="Balante">Balante</option>
         </select>
@@ -143,7 +132,7 @@
     <div class="area">
         <label for="experience" class="areas_volunteer">Do you have any volunteering experience?</label>
         <p class="if_yes">If yes, please describe.</p>
-        <textarea id="experience" class="textarea"></textarea>
+        <textarea id="experience" class="textarea" name="textarea_db"></textarea>
     </div>
 </div>
 <br>
@@ -218,10 +207,7 @@
           
     </div>
 </div>
-
-
-
-<h1>HI</h1>
+   </form>
     <script src="application.js"></script>
 </body>
 </html>
