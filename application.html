@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="application.css">
+</head>
+<body>
+<!-- 
+    <header>
+        <nav class="navar">
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#contact">Contact</a></li>
+              </ul>
+        </nav>
+    </header>
+-->
+
+<div class="first_row">
+    <div class="form-name">
+        <label for="firstname">First Name</label>
+        <input type="text" id="firstname" class="firstname_input"  minlength="6" required>
+    </div>
+    <div class="form-name">
+        <label for="middlename">Middle Name</label>
+        <input type="text" id="middlename" class="middlename_input"  minlength="6" required>
+    </div>
+    <div class="form-name">
+        <label for="lastname">Last Name</label>
+        <input type="text" id="lastname" class="lastname_input" minlength="6" required>
+    </div>
+</div>
+
+<div class="second_row">
+    <div class="form-birt_email_contact">
+        <label for="birthdate">Birthdate</label>
+        <input type="date" id="birthdate" class="birthdate_input"  required>
+    </div>
+    <div class="form-birt_email_contact">
+        <label for="email">Email</label>
+        <input type="email" id="email" class="email_input"  required>
+    </div>
+    <div class="form-birt_email_contact">
+        <label for="phone">Phone/Mobile No</label>
+        <input type="text" id="phone" name="phone" placeholder="1234 567 8901" maxlength="13" required oninput="formatPhone(this)">
+    </div>
+</div>
+
+<div class="third_row">
+    <div class="add">
+        <div class="form-address">
+            <label for="address">Address</label>
+            <input for="text" class="address" id="address" placeholder="House no., Street" required>
+        </div>
+    </div>
+    <div class="form-address">
+        <p for="barangay">Barangay</p>
+        <select required>
+            <option value="" disabled selected>Please select</option>
+            <option value="Balante">Balante</option>
+            <option value="Bayanihan">Bayanihan</option>
+            <option value="Bulak">Bulak</option>
+            <option value="Bungo">Bungo</option>
+            <option value="Kapalangan">Kapalangan</option>
+            <option value="Mabuga">Mabuga</option>
+            <option value="Maburak">Maburak</option>
+            <option value="Mahipon">Mahipon</option>
+            <option value="Makabaclay">Makabaclay</option>
+            <option value="Malimba">Malimba</option>
+            <option value="Mangino">Mangino</option>
+            <option value="Marelo">Marelo</option>
+            <option value="Pambuan">Pambuan</option>
+            <option value="Parcutela">Parcutela</option>
+            <option value="Puting Tubig">Puting Tubig</option>
+            <option value="San Lorenzo">San Lorenzo</option>
+            <option value="San Nicolas">San Nicolas</option>
+            <option value="San Roque">San Roque</option>
+            <option value="San Vicente">San Vicente</option>
+            <option value="Santa Cruz">Santa Cruz</option>
+            <option value="Santo Cristo Norte">Santo Cristo Norte</option>
+            <option value="Santo Cristo Sur">Santo Cristo Sur</option>
+            <option value="Santo Niño">Santo Niño</option>
+            </select>
+    </div>
+    <div class="form-address">
+        <p for="city">City/Municipality</p>
+        <select required>
+            <option value="" disabled selected>Please select</option>
+            <option value="Balante">Balante</option>
+            </select>
+    </div>
+    <div class="form-address">
+        <p for="province">Province</p>
+        <select required>
+            <option value="" disabled selected>Please select</option>
+            <option value="Balante">Balante</option>
+            </select>
+    </div>
+</div>
+<hr style="width: 62%; ">
+
+<div class="fourth_row">
+    <div class="form-college">
+        <label for="college">College/School</label>
+        <input type="text" id="college" class="college" minlength="6" required>
+    </div>
+    <div class="form-college">
+        <label for="course">Course</label>
+        <input type="text" id="course" class="course" minlength="6" required>
+    </div>
+</div>
+<div class="fifth_row">
+    <div class="form-occupation">
+        <label for="occupation">Occupation</label>
+        <select required class="occupation">
+            <option value="" disabled selected>Please select</option>
+            <option value="Balante">Balante</option>
+        </select>
+    </div>
+    <div class="form-occupation">
+        <label for="department">Department/Position</label>
+        <input type="text" id="department" class="department" minlength="6" required>
+    </div>
+</div>
+
+<div class="sixth_row">
+    <div class="form-volunteer_area">
+        <label for="volunteer" >In which areas would you like to volunteer?</label>
+        <select required class="volunteer">
+            <option value="" disabled selected>Please select</option>
+            <option value="Balante">Balante</option>
+        </select>
+        <label for="volunteer" >Which of the volunteering activities interests you?</label>
+        <select required class="volunteer">
+            <option value="" disabled selected>Please select</option>
+            <option value="Balante">Balante</option>
+        </select>
+    </div>
+    <div class="area">
+        <label for="experience" class="areas_volunteer">Do you have any volunteering experience?</label>
+        <p class="if_yes">If yes, please describe.</p>
+        <textarea id="experience" class="textarea"></textarea>
+    </div>
+</div>
+<br>
+<hr style="width: 62%; ">
+
+<div class="seventh_row">
+    <div class="form-available">
+        <label for="available" >Select your available days:</label><br>
+        <div class="one">
+            <label><input type="checkbox" name="days" value="Monday">Monday&nbsp;&nbsp;</label>
+            <label><input type="checkbox" name="days" value="Tuesday">Tuesday&nbsp;&nbsp;</label>
+            <label><input type="checkbox" name="days" value="Wednesday">Wednesday</label>
+            <label><input type="checkbox" name="days" value="Thursday">Thursday</label>
+          </div>
+          <br>
+          <div class="Second">
+            <label><input type="checkbox" name="days" value="Friday">Friday&nbsp;&nbsp;&nbsp;&nbsp;</label>
+            <label><input type="checkbox" name="days" value="Saturday">Saturday&nbsp;</label>
+            <label><input type="checkbox" name="days" value="Sunday">Sunday</label>    
+          </div>
+    </div> 
+    <div class="form-available">
+        <div class="time-selection">
+            <label for="from-time">From:</label>
+            <select id="from-hour" name="from-hour" required>
+              <option value="" disabled selected>Please select</option>
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5</option>
+              <option value="6">6</option>
+              <option value="7">7</option>
+              <option value="8">8</option>
+              <option value="9">9</option>
+              <option value="10">10</option>
+              <option value="11">11</option>
+              <option value="12">12</option>
+            </select>
+          
+            <select id="from-ampm" name="from-ampm" required>
+              <option value="" disabled selected>AM/PM</option>
+              <option value="AM">AM</option>
+              <option value="PM">PM</option>
+            </select>
+          </div>
+          
+          <div class="time-selection">
+            <label for="to-time">To:</label>
+            <select id="to-hour" name="to-hour" required>
+              <option value="" disabled selected>Please select</option>
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5</option>
+              <option value="6">6</option>
+              <option value="7">7</option>
+              <option value="8">8</option>
+              <option value="9">9</option>
+              <option value="10">10</option>
+              <option value="11">11</option>
+              <option value="12">12</option>
+            </select>
+          
+            <select id="to-ampm" name="to-ampm" required>
+              <option value="" disabled selected>AM/PM</option>
+              <option value="AM">AM</option>
+              <option value="PM">PM</option>
+            </select>
+          </div>
+          
+    </div>
+</div>
+
+
+
+<h1>HI</h1>
+    <script src="application.js"></script>
+</body>
+</html>
