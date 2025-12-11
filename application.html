@@ -15,15 +15,15 @@
 <div class="first_row">
     <div class="form-name">
         <label for="firstname">First Name</label>
-        <input type="text" id="firstname" class="firstname_input" autocomplete="off"  minlength="6" name="firstname_db" required>
+        <input type="text" id="firstname" class="firstname_input" autocomplete="off"  minlength="3" name="firstname_db" required>
     </div>
     <div class="form-name">
         <label for="middlename">Middle Name</label>
-        <input type="text" id="middlename" class="middlename_input" autocomplete="off" minlength="6" name="middlename_db" required>
+        <input type="text" id="middlename" class="middlename_input" autocomplete="off" minlength="3" name="middlename_db" required>
     </div>
     <div class="form-name">
         <label for="lastname">Last Name</label>
-        <input type="text" id="lastname" class="lastname_input" autocomplete="off" minlength="6" name="lastname_db" required>
+        <input type="text" id="lastname" class="lastname_input" autocomplete="off" minlength="3" name="lastname_db" required>
     </div> 
 </div>
 
@@ -119,7 +119,7 @@
     <div class="area">
         <label for="experience" class="areas_volunteer">Do you have any volunteering experience?</label>
         <p class="if_yes">If yes, please describe.</p>
-        <textarea id="experience" class="textarea" name="textarea_db"></textarea>
+        <textarea id="experience" class="textarea" name="volunteering_info_db"></textarea>
     </div>
 </div>
 <br>
@@ -203,9 +203,7 @@
 
 <div class="ninth_row">
     <div class="form-button">
-        <a href="PAGE2.html">
-            <button class="button">VOLUNTEER</button>
-        </a>
+        <button type="submit" class="button" id="button">VOLUNTEER</button>
     </div>
 </div>
     

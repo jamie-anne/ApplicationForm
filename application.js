@@ -39,3 +39,40 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 
 });
+
+/*
+
+document.getElementById("button").addEventListener("click", () => {
+
+    const firstname = document.getElementById("firstname").value;
+    const middlename = document.getElementById("middlename").value;
+    const lastname = document.getElementById("lastname").value;
+    const address = document.getElementById("address").value;
+
+  
+    const areaVolunteer = document.querySelector('select[name="area_volunteer_db"]').value;
+    const activityVolunteer = document.querySelector('select[name="activities_volunteer_db"]').value;
+
+   
+    const days = Array.from(document.querySelectorAll('input[name="days_db"]:checked'))
+                      .map(cb => cb.value);
+
+
+    const fromTime = document.getElementById("from-hour").value + " " + document.getElementById("from-ampm").value;
+    const toTime = document.getElementById("to-hour").value + " " + document.getElementById("to-ampm").value;
+    const timeRange = fromTime + " to " + toTime;
+
+
+    localStorage.setItem("volunteerFirstName", firstname);
+    localStorage.setItem("volunteerMiddleName", middlename);
+    localStorage.setItem("volunteerLastName", lastname);
+    localStorage.setItem("volunteerAddress", address);
+    localStorage.setItem("volunteerArea", areaVolunteer);
+    localStorage.setItem("volunteerActivity", activityVolunteer);
+    localStorage.setItem("volunteerDays", JSON.stringify(days));
+    localStorage.setItem("volunteerTime", timeRange);
+
+    window.location.href = "application2.html";
+});
+
+*/
