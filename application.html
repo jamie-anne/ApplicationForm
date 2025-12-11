@@ -156,7 +156,7 @@
     </div> 
     <div class="form-available">
         <div class="time-selection">
-            <label for="from-time">From:</label>
+            <label for="from-time" class="from">From:</label>
             <select id="from-hour" name="from-hour" required>
               <option value="" disabled selected>Please select</option>
               <option value="1">1</option>
@@ -181,7 +181,7 @@
           </div>
           
           <div class="time-selection">
-            <label for="to-time">To:</label>
+            <label for="to-time" class="to">To:</label>
             <select id="to-hour" name="to-hour" required>
               <option value="" disabled selected>Please select</option>
               <option value="1">1</option>
@@ -207,6 +207,15 @@
           
     </div>
 </div>
+
+<div class="eight_row">
+    <div class="form-additional">
+        <label for="additional">Additional notes about your schedule</label>
+        <textarea id="additional" class="additional_info" name="additional_info_db"></textarea>
+    </div>
+</div>
+
+    
    </form>
     <script src="application.js"></script>
 </body>
