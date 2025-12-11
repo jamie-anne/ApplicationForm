@@ -5,6 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="application.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inclusive+Sans&display=swap" rel="stylesheet">
+
+
 </head>
 <body>
     <form action="application.php" method="post">
@@ -39,57 +42,41 @@
     </div>
 </div>
 
+<div class="address_label">
+    <hr class="left-line">
+    <span><b>Address</b></span>
+    <hr class="right-line">
+</div>
+
+ 
 <div class="third_row">
+    <div class="form-address">
+       
+        <select required name="province_db" id="province">
+            <option value='' disabled selected>Select Province</option>
+            <option value="Nueva Ecija">Nueva Ecija</option>
+        </select>
+    </div>
+    <div class="form-address">
+        <select required name="city_db" id="city">
+            <option value='' disabled selected>Select City</option>
+        </select>
+    </div>
+    <div class="form-address">
+        <select required name="barangay_db" id="barangay">
+            <option value="" disabled selected>Select Barangay</option>
+        </select>
+    </div>
     <div class="add">
         <div class="form-address">
-            <label for="address">Address</label>
             <input for="text" class="address" id="address" placeholder="House no., Street" autocomplete="off" name="address_db" required>
         </div>
     </div>
-    <div class="form-address">
-        <p for="barangay">Barangay</p>
-        <select required name="barangay_db">
-            <option value="" disabled selected>Please select</option>
-            <option value="Balante">Balante</option>
-            <option value="Bayanihan">Bayanihan</option>
-            <option value="Bulak">Bulak</option>
-            <option value="Bungo">Bungo</option>
-            <option value="Kapalangan">Kapalangan</option>
-            <option value="Mabuga">Mabuga</option>
-            <option value="Maburak">Maburak</option>
-            <option value="Mahipon">Mahipon</option>
-            <option value="Makabaclay">Makabaclay</option>
-            <option value="Malimba">Malimba</option>
-            <option value="Mangino">Mangino</option>
-            <option value="Marelo">Marelo</option>
-            <option value="Pambuan">Pambuan</option>
-            <option value="Parcutela">Parcutela</option>
-            <option value="Puting Tubig">Puting Tubig</option>
-            <option value="San Lorenzo">San Lorenzo</option>
-            <option value="San Nicolas">San Nicolas</option>
-            <option value="San Roque">San Roque</option>
-            <option value="San Vicente">San Vicente</option>
-            <option value="Santa Cruz">Santa Cruz</option>
-            <option value="Santo Cristo Norte">Santo Cristo Norte</option>
-            <option value="Santo Cristo Sur">Santo Cristo Sur</option>
-            <option value="Santo Niño">Santo Niño</option>
-            </select>
-    </div>
-    <div class="form-address">
-        <p for="city">City/Municipality</p>
-        <select required name="city_db" >
-            <option value="" disabled selected>Please select</option>
-            <option value="Balante">Balante</option>
-            </select>
-    </div>
-    <div class="form-address">
-        <p for="province">Province</p>
-        <select required name="province_db">
-            <option value="" disabled selected>Please select</option>
-            <option value="Balante">Balante</option>
-            </select>
-    </div>
+    
+    
+    
 </div>
+
 <hr style="width: 62%; ">
 
 <div class="fourth_row">
@@ -157,7 +144,7 @@
     <div class="form-available">
         <div class="time-selection">
             <label for="from-time" class="from">From:</label>
-            <select id="from-hour" name="from-hour" required>
+            <select id="from-hour" name="from_hour_db" required>
               <option value="" disabled selected>Please select</option>
               <option value="1">1</option>
               <option value="2">2</option>
@@ -173,7 +160,7 @@
               <option value="12">12</option>
             </select>
           
-            <select id="from-ampm" name="from-ampm" required>
+            <select id="from-ampm" name="from_ampm_" required>
               <option value="" disabled selected>AM/PM</option>
               <option value="AM">AM</option>
               <option value="PM">PM</option>
@@ -182,7 +169,7 @@
           
           <div class="time-selection">
             <label for="to-time" class="to">To:</label>
-            <select id="to-hour" name="to-hour" required>
+            <select id="to-hour" name="to_hour_db" required>
               <option value="" disabled selected>Please select</option>
               <option value="1">1</option>
               <option value="2">2</option>
@@ -198,7 +185,7 @@
               <option value="12">12</option>
             </select>
           
-            <select id="to-ampm" name="to-ampm" required>
+            <select id="to-ampm" name="to_ampm_db" required>
               <option value="" disabled selected>AM/PM</option>
               <option value="AM">AM</option>
               <option value="PM">PM</option>
@@ -215,6 +202,13 @@
     </div>
 </div>
 
+<div class="ninth_row">
+    <div class="form-button">
+        <a href="PAGE2.html">
+            <button class="button">VOLUNTEER</button>
+        </a>
+    </div>
+</div>
     
    </form>
     <script src="application.js"></script>
